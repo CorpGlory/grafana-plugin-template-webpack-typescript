@@ -12,9 +12,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: "amd"
   },
-  externals: {
-    "grafana/app/plugins/sdk": "app/plugins/sdk"
-  },
+  externals: function(context, request, callback) {
+    var prefix = 'grafana/';
+    if (request.indexOf(prefix) === 0) {
+      return callback(null, request.substr(prefix.length));
+    }
+    callback();
+  }
+  ,
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new CopyWebpackPlugin([
@@ -31,9 +36,7 @@ module.exports = {
         loaders: [
           {
             loader: "babel-loader",
-            options: {
-              presets: ['env']
-            }
+            options: { presets: ['env'] }
           },
           "ts-loader"
         ], 
