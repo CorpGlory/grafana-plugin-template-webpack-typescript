@@ -1,0 +1,22 @@
+{
+  "type": "panel",
+  "name": "Plugin Template TypeScript Name",
+  "id": "grafana-plugin-template-webpack-typescript",
+  "info": {
+    "description": "Plugin Template TypeScript Description",
+    "author": {
+      "name": "Author Name",
+      "url": "https://github.com/CorpGlory/grafana-plugin-template-webpack-typescript"
+    },
+    "keywords": [ ],
+    "logos": { },
+    "links": [ ],
+    "screenshots": [ ],
+    "version": "0.0.1",
+    "updated": "2017-09-16"
+  },
+  "dependencies": {
+    "grafanaVersion": "4.1.1",
+    "plugins": [ ]
+  }
+}

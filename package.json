@@ -1,0 +1,22 @@
+{
+  "name": "grafana-plugin-template-webpack-typescript",
+  "version": "1.0.0",
+  "description": "Some description",
+  "main": "dist/module.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Alexey Velikiy",
+  "license": "MIT",
+  "repository": "https://github.com/CorpGlory/grafana-plugin-template-webpack-typescript",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "loader-utils": "^1.1.0",
+    "webpack": "^3.6.0"
+  },
+  "dependencies": {}
+}
