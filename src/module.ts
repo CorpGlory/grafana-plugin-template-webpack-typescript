@@ -1,7 +1,9 @@
-import { PanelCtrl } from 'app/plugins/sdk';
+import { PanelCtrl } from 'grafana/app/plugins/sdk';
 
 class Ctrl extends PanelCtrl {
-
+    
+  static template: string = "<div>Hello from <b>TypeScript Template Plugin</b></div>";
+  
   constructor($scope, $injector) {
     super($scope, $injector);
   }
@@ -10,7 +12,5 @@ class Ctrl extends PanelCtrl {
   }
   
 }
-
-Ctrl.template = "<div>Hello from <b>Template Plugin</b></div>";
 
 export { Ctrl as PanelCtrl }

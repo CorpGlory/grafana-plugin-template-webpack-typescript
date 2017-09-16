@@ -70,14 +70,7 @@ define(["app/plugins/sdk"], function(__WEBPACK_EXTERNAL_MODULE_1__) { return /**
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.PanelCtrl = undefined;
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _sdk = __webpack_require__(1);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -85,25 +78,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Ctrl = function (_PanelCtrl) {
-  _inherits(Ctrl, _PanelCtrl);
+Object.defineProperty(exports, "__esModule", { value: true });
+var sdk_1 = __webpack_require__(1);
 
-  function Ctrl($scope, $injector) {
-    _classCallCheck(this, Ctrl);
+var Ctrl = function (_sdk_1$PanelCtrl) {
+    _inherits(Ctrl, _sdk_1$PanelCtrl);
 
-    return _possibleConstructorReturn(this, (Ctrl.__proto__ || Object.getPrototypeOf(Ctrl)).call(this, $scope, $injector));
-  }
+    function Ctrl($scope, $injector) {
+        _classCallCheck(this, Ctrl);
 
-  _createClass(Ctrl, [{
-    key: "link",
-    value: function link(scope, element) {}
-  }]);
+        return _possibleConstructorReturn(this, (Ctrl.__proto__ || Object.getPrototypeOf(Ctrl)).call(this, $scope, $injector));
+    }
 
-  return Ctrl;
-}(_sdk.PanelCtrl);
+    _createClass(Ctrl, [{
+        key: "link",
+        value: function link(scope, element) {}
+    }]);
 
-Ctrl.template = "<div>Hello from <b>Template Plugin</b></div>";
+    return Ctrl;
+}(sdk_1.PanelCtrl);
 
+Ctrl.template = "<div>Hello from <b>TypeScript Template Plugin</b></div>";
 exports.PanelCtrl = Ctrl;
 
 /***/ }),

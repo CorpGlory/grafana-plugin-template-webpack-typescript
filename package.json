@@ -2,7 +2,7 @@
   "name": "grafana-plugin-template-webpack-typescript",
   "version": "1.0.0",
   "description": "Some description",
-  "main": "dist/module.js",
+  "main": "dist/module",
   "scripts": {
     "build": "webpack"
   },
@@ -11,12 +11,15 @@
   "license": "MIT",
   "repository": "https://github.com/CorpGlory/grafana-plugin-template-webpack-typescript",
   "devDependencies": {
+    "@types/grafana": "git+https://git@github.com/CorpGlory/types-grafana.git",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "copy-webpack-plugin": "^4.0.1",
     "loader-utils": "^1.1.0",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.4.2"
   },
   "dependencies": {}
 }

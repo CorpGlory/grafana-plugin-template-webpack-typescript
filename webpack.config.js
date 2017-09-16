@@ -6,14 +6,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   target: 'node',
   context: __dirname + "/src",
-  entry: './module.js',
+  entry: './module.ts',
   output: {
     filename: "module.js",
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: "amd"
   },
   externals: {
-    "app/plugins/sdk": "app/plugins/sdk"
+    "grafana/app/plugins/sdk": "app/plugins/sdk"
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -22,18 +22,22 @@ module.exports = {
     ])
   ],
   resolve: {
+    extensions: [".ts", ".js"]
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
-        }
+        test: /\.tsx?$/, 
+        loaders: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ['env']
+            }
+          },
+          "ts-loader"
+        ], 
+        exclude: /node_modules/,
       }
     ]
   }
