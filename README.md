@@ -1,4 +1,4 @@
-# Progress List Panel
+# Webpack Template for Grafana plugins development
 
 # Usage
 
